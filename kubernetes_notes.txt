@@ -8,3 +8,30 @@ Conceito básico sobre kubernetes
     - É possível ter um segundo container dentro do POD realizando uma função auxiliar análoga ao primeiro.
 
     - Com um POD podemos setar um conjunto de chave-valores 
+
+- Os PODs funcionam como gados. Ele não tem um ciclo de vida muito relevante dentro do kubernetes, ao contrário dos network services.
+
+- Para gerenciar os PODs, utilizamos os REPLICA SETs. Os replica sets são uma maneira de gerenciar o ciclo de vida dos PODs.
+
+- Entretanto, não declaramos os REPLICA SETs num ambiente produtivo. Para esta finalidade, utilizamos um recurso mais robusto: os DEPLOYMENTs.
+
+- A diferenças básicas entre um REPLICA SET e um DEPLOYMENT são:
+
+     O DEPLOYMENT inclui um mecanismo de atualização automática que, por padrão, avalia se o estado dos PODs está HEALTHY.
+     
+     Capacidade de registrar em histórico os deploys realizados para a sua definição de POD, o que, por consequência, dá também a capacidade de realizar um rollback para um estado anteriormente definido. 
+     
+- Basicamente, a cada deploy feito, onde uma nova configuração é identificada, um novo replica set é criado. Por padrão, o Kubernetes grava até 10 estados de rollout.
+
+- Além dos PODs, REPLICA SETs e DEPLOYMENTs, temos também o conceito de "NAMESPACES" dentro do Kubernetes.
+
+- Os namespaces são uma forma de organizar os recursos que você gerencia dentro do Kubernetes.
+
+- Assim como você pode criar namespaces, o Kubernetes também cria os dele por padrão.
+
+- O serviço de DNS do Kubernetes se encontra dentro do namespace kube-system
+
+- Para listar todos os namespaces existentes dentro do Kubernetes
+
+        kubectl get namespaces
+
