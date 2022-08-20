@@ -1,0 +1,10 @@
+kubernetes é responsável pelo gerenciamento dos containers: start, stop, certificação de que estão rodando sempre, avaliando se o POD está utilizando muito disco ou  CPU e seu ciclo de vida em geral.
+
+Conceito básico sobre kubernetes
+
+    POD
+    - Wrapper para um container. É o POD que o kubernetes enxerga de fato
+    - Na maioria dos casos o relacionamento é 1:1 com o container
+    - É possível ter um segundo container dentro do POD realizando uma função auxiliar análoga ao primeiro.
+
+    - Com um POD podemos setar um conjunto de chave-valores 
