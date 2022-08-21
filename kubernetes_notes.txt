@@ -35,3 +35,7 @@ Conceito básico sobre kubernetes
 
         kubectl get namespaces
 
+- Podemos encontrar o IP de qualquer SERVICE que quisermos apenas pelo seu NOME, utilizando o serviço de DNS do Kubernetes.
+
+    Basicamente existe um mapeamento de IPs (através do serviço de DNS do Kubernetes), onde o NOME dado ao serviço é vinculado ao seu IP de acesso.
+
