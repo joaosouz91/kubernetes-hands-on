@@ -9,12 +9,11 @@ spec:
   ports:
     - name: http
       port: 8161
-      nodePort: 30010 #external mapping
 
     - name: endpoint
       port: 61616
       
-  type: NodePort
+  type: ClusterIP
 
 ---
 apiVersion: v1
@@ -53,5 +52,4 @@ spec:
   ports:
     - name: http
       port: 80
-      nodePort: 30080 # external mapping
-  type: NodePort
+  type: LoadBalancer
