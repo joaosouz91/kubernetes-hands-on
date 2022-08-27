@@ -39,3 +39,6 @@ Conceito básico sobre kubernetes
 
     Basicamente existe um mapeamento de IPs (através do serviço de DNS do Kubernetes), onde o NOME dado ao serviço é vinculado ao seu IP de acesso.
 
+- Comando para exibir todos os Persistent Volumes criados
+
+    kubectl get pv
